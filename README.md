@@ -149,6 +149,18 @@ following in dir/.gitattributes:
 The second pattern is essential for ensuring that .gitattributes itself
 is not encrypted.
 
+Git Config File
+---------------
+
+Ensure the following are in the .git/config file
+
+[filter "git-crypt"]
+	smudge = \"C:\\\\Programs\\\\Git\\\\mingw64\\\\bin\\\\git-crypt.exe\" smudge
+	clean = \"C:\\\\Programs\\\\Git\\\\mingw64\\\\bin\\\\git-crypt.exe\" clean
+	required = true
+[diff "git-crypt"]
+	textconv = \"C:\\\\Programs\\\\Git\\\\mingw64\\\\bin\\\\git-crypt.exe\" diff
+
 Mailing Lists
 -------------
 
